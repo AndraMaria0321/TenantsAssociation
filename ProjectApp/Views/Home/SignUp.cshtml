@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Sign Up";
+}
+
+<center>
+    <img class="body center"><br><br><br>
+    <h1 class="text-info">Sign Up</h1><br><br>
+    <form>
+        <fieldset>
+            <div class="form-group">
+                <label for="exampleInputPassword1"></label>
+                <input type="username" class="form-control" id="exampleInputUsername" placeholder="Username" style="max-width: 20rem;">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1"></label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" style="max-width: 20rem;">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1"></label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" style="max-width: 20rem;">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1"></label>
+                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirm password" style="max-width: 20rem;">
+            </div>
+            <button type="button" class="btn btn-info">Sign Up</button>
+        </fieldset>
+    </form>
+
+    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="SignIn">You already have an account? Click here to sign in!</a>
+</center>
