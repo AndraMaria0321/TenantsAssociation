@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProjectApp.Data;
+using ProjectApp.Interfaces;
+using ProjectApp.Services;
 using ProjectWebApp.Models;
 using System;
 using System.Collections.Generic;
@@ -36,9 +38,11 @@ namespace ProjectApp
             services.AddControllersWithViews();
             services.AddRazorPages();
 
-            var connection = @"Server=(localdb)\mssqllocaldb;Database=TenantsDb;Trusted_Connection=True;ConnectRetryCount=0";
-            services.AddDbContext<TenantsContext>
-                (options => options.UseSqlServer(connection));
+           // var connection = @"Server=(localdb)\mssqllocaldb;Database=TenantsDb;Trusted_Connection=True;ConnectRetryCount=0";
+           services.AddDbContext<TenantsContext>
+               (options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped<IInvoice, InvoiceService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -60,95 +60,29 @@
                 <div class="card-header">Add Invoice</div>
                 <div class="card-body">
 
-                    <form>
-                        <fieldset>
-                            <div class="form-group">
-                                <label for="exampleInputUsername">Input username to send invoice:</label>
-                                <input type="username" class="form-control" id="exampleInputUsername" placeholder="Username" style="max-width: 20rem;">
-                            </div>
+                    <form asp-controller="Home" asp-action="GetDetails" method="post">
+                        <div class="form-group">
+                            <label>Input User Name:</label>
+                            <input name="txtName" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Input Apartment Number:</label>
+                            <input name="txtApNumber" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Input Price:</label>
+                            <input name="txtPrice" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Input Due Date:</label>
+                            <input name="txtDate" type="date" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Description:</label>
+                            <input name="txtDescription" type="text" class="form-control">
+                        </div>
 
-                            <div class="form-group">
-                                <label class="control-label">Input invoice price:</label>
-                                <div class="form-group">
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">$</span>
-                                        </div>
-                                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                                        <div class="input-group-append">
-                                            <span class="input-group-text">.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <label>Select due date:</label>
-                            <div class="form-group">
-                                <label for="exampleSelect1">Day:</label>
-                                <select class="form-control" id="exampleSelect1">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                    <option>8</option>
-                                    <option>9</option>
-                                    <option>10</option>
-                                    <option>11</option>
-                                    <option>12</option>
-                                    <option>13</option>
-                                    <option>14</option>
-                                    <option>15</option>
-                                    <option>16</option>
-                                    <option>17</option>
-                                    <option>18</option>
-                                    <option>19</option>
-                                    <option>20</option>
-                                    <option>21</option>
-                                    <option>22</option>
-                                    <option>23</option>
-                                    <option>24</option>
-                                    <option>25</option>
-                                    <option>26</option>
-                                    <option>27</option>
-                                    <option>28</option>
-                                    <option>29</option>
-                                    <option>30</option>
-                                    <option>31</option>
-                                </select>
-                                <label for="exampleSelect1">Month:</label>
-                                <select class="form-control" id="exampleSelect1">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                    <option>8</option>
-                                    <option>9</option>
-                                    <option>10</option>
-                                    <option>11</option>
-                                    <option>12</option>
-                                </select>
-                                <label for="exampleSelect1">Year:</label>
-                                <select class="form-control" id="exampleSelect1">
-                                    <option>2019</option>
-                                    <option>2020</option>
-                                    <option>2021</option>
-                                    <option>2022</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="exampleTextarea">Comments:</label>
-                                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary">Send Invoice</button>
-                        </fieldset>
+                        <button iid="Submit1" type="submit" value="submit" class="btn btn-primary">Send Invoice</button>
                     </form>
 
                 </div>

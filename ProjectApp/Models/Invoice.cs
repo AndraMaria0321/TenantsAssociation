@@ -10,15 +10,15 @@ namespace ProjectWebApp.Models
     {
         public int InvoiceId { get; set; }
 
-        public int Price { get; set; }
+        public string Name { get; set; }
 
-        public string Description { get; set; }
+        public int ApartmentNo { get; set; }
+
+        public int Price { get; set; }
 
         public DateTime DueDate { get; set; }
 
-        public DateTime PayDate { get; set; }
-
-        public DateTime CreatedDate { get; set; }
+        public string Description { get; set; }
 
         public int ApartmentId { get; set; }
 
